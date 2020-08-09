@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C662FC3ACED308A6003B4BE /* Pods_ViperChitChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA61C643AFECFA33A3AD83C7 /* Pods_ViperChitChat.framework */; };
+		6D1C9D5224E027BD0073A806 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D1C9D5124E027BD0073A806 /* GoogleService-Info.plist */; };
 		6D56F35424D9EDC700F635EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D56F35324D9EDC700F635EA /* AppDelegate.swift */; };
 		6D56F35624D9EDC700F635EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D56F35524D9EDC700F635EA /* SceneDelegate.swift */; };
 		6D56F35824D9EDC700F635EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D56F35724D9EDC700F635EA /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		03FCC3F91335F8A3B210BA58 /* Pods-ViperChitChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperChitChat.debug.xcconfig"; path = "Target Support Files/Pods-ViperChitChat/Pods-ViperChitChat.debug.xcconfig"; sourceTree = "<group>"; };
 		57382F40FA8B20489B52F951 /* Pods-ViperChitChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperChitChat.release.xcconfig"; path = "Target Support Files/Pods-ViperChitChat/Pods-ViperChitChat.release.xcconfig"; sourceTree = "<group>"; };
+		6D1C9D5124E027BD0073A806 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D56F35024D9EDC700F635EA /* ViperChitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperChitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D56F35324D9EDC700F635EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D56F35524D9EDC700F635EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				6D56F35724D9EDC700F635EA /* ViewController.swift */,
 				6D56F35924D9EDC700F635EA /* Main.storyboard */,
 				6D56F35F24D9EDC800F635EA /* Assets.xcassets */,
+				6D1C9D5124E027BD0073A806 /* GoogleService-Info.plist */,
 				6D56F36124D9EDC800F635EA /* LaunchScreen.storyboard */,
 				6D56F36424D9EDC800F635EA /* Info.plist */,
 				6D56F35C24D9EDC700F635EA /* ViperChitChat.xcdatamodeld */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D56F36324D9EDC800F635EA /* LaunchScreen.storyboard in Resources */,
+				6D1C9D5224E027BD0073A806 /* GoogleService-Info.plist in Resources */,
 				6D56F36024D9EDC800F635EA /* Assets.xcassets in Resources */,
 				6D56F35B24D9EDC700F635EA /* Main.storyboard in Resources */,
 			);
