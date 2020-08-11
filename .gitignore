@@ -37,7 +37,6 @@ Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
 
-
 #CocoaPods
 Pods/
 
