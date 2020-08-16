@@ -90,8 +90,7 @@ private func GREYSetCurrentAsFailable() {
   let greyFailureHandler =
     Thread.current.threadDictionary.value(forKey: kGREYFailureHandlerKey) as! GREYFailureHandler
   if greyFailureHandler.responds(to: greyFailureHandlerSelector) {
-    greyFailureHandler.setInvocationFile!(#file,
-                                          andInvocationLine: #line)
+    greyFailureHandler.setInvocationFile!(#file, andInvocationLine:#line)
   }
 }
 
@@ -108,7 +107,7 @@ open class EarlGrey: NSObject {
   }
 
   @available(*, deprecated, renamed: "selectElement(with:)")
-  open class func select(elementWithMatcher matcher: GREYMatcher,
+  open class func select(elementWithMatcher matcher:GREYMatcher,
                          file: StaticString = #file,
                          line: UInt = #line) -> GREYElementInteraction {
     return EarlGreyImpl.invoked(fromFile: file.description, lineNumber: line)
@@ -147,7 +146,7 @@ extension GREYInteraction {
   }
 
   @discardableResult public func assert(_ matcher: @autoclosure () -> GREYMatcher,
-                                        error: UnsafeMutablePointer<NSError?>!) -> Self {
+                                        error:UnsafeMutablePointer<NSError?>!) -> Self {
     return self.__assert(with: matcher(), error: error)
   }
 
@@ -158,7 +157,7 @@ extension GREYInteraction {
 
   @available(*, deprecated, renamed: "assert(_:error:)")
   @discardableResult public func assert(with matcher: GREYMatcher!,
-                                        error: UnsafeMutablePointer<NSError?>!) -> Self {
+                                        error:UnsafeMutablePointer<NSError?>!) -> Self {
     return self.__assert(with: matcher, error: error)
   }
 
@@ -167,7 +166,7 @@ extension GREYInteraction {
   }
 
   @discardableResult public func perform(_ action: GREYAction!,
-                                         error: UnsafeMutablePointer<NSError?>!) -> Self {
+                                         error:UnsafeMutablePointer<NSError?>!) -> Self {
     return self.__perform(action, error: error)
   }
 

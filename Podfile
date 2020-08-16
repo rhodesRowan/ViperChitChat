@@ -11,6 +11,8 @@ target 'ViperChitChat' do
   use_frameworks!
   pod 'SwiftLint'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'ViperChitChatTests' do
     inherit! :search_paths
