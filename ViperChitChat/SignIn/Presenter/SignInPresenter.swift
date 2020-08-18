@@ -24,6 +24,11 @@ class SignInPresenter: SignInPresenterInterface {
     
     func userDidLoginSuccessfully() {
         print("user did sign in succesfully")
+        router?.presentChatListModule()
+    }
+    
+    func notifyUserDidTapRegisterButton() {
+        router?.presentRegisterModule()
     }
 
     func userDidFailToLogin() {

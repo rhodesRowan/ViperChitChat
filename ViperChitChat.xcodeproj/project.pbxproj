@@ -24,6 +24,13 @@
 		6D56F35424D9EDC700F635EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D56F35324D9EDC700F635EA /* AppDelegate.swift */; };
 		6D56F36024D9EDC800F635EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D56F35F24D9EDC800F635EA /* Assets.xcassets */; };
 		6D56F36324D9EDC800F635EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D56F36124D9EDC800F635EA /* LaunchScreen.storyboard */; };
+		6DD48C1E24EC59EE003334C4 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD48C1D24EC59EE003334C4 /* RegisterPresenter.swift */; };
+		6DD48C2024EC5BFB003334C4 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD48C1F24EC5BFB003334C4 /* RegisterInteractor.swift */; };
+		6DD48C2224EC5C85003334C4 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD48C2124EC5C85003334C4 /* RegisterDataManager.swift */; };
+		6DD48C2424EC5D64003334C4 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD48C2324EC5D64003334C4 /* RegisterRouter.swift */; };
+		6DDBF7F224EC449700E2D18A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBF7F024EC449700E2D18A /* RegisterViewController.swift */; };
+		6DDBF7F324EC449700E2D18A /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DDBF7F124EC449700E2D18A /* RegisterViewController.xib */; };
+		6DDBF7F524EC46DF00E2D18A /* RegisterInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBF7F424EC46DF00E2D18A /* RegisterInterfaces.swift */; };
 		BFC9594026776B174F485A1A /* Pods_ViperChitChat_ViperChitChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8C05505D8BA8323F160CF0 /* Pods_ViperChitChat_ViperChitChatUITests.framework */; };
 		ECCAF555BD1E0153776896C9 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612CAD144C252CBDDEA17CF5 /* EarlGrey.framework */; };
 		EE58CCF36212F2CA4C2B8B40 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94847B7C1EF1216244A6E5D /* EarlGrey.swift */; };
@@ -74,6 +81,13 @@
 		6D56F35F24D9EDC800F635EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D56F36224D9EDC800F635EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D56F36424D9EDC800F635EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DD48C1D24EC59EE003334C4 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		6DD48C1F24EC5BFB003334C4 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		6DD48C2124EC5C85003334C4 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
+		6DD48C2324EC5D64003334C4 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		6DDBF7F024EC449700E2D18A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6DDBF7F124EC449700E2D18A /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		6DDBF7F424EC46DF00E2D18A /* RegisterInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInterfaces.swift; sourceTree = "<group>"; };
 		858557EE78F8ED17EE26CBE3 /* Pods-ViperChitChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperChitChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-ViperChitChatUITests/Pods-ViperChitChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AD0F037D57DACD728917D9C /* Pods-ViperChitChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperChitChatUITests.release.xcconfig"; path = "Target Support Files/Pods-ViperChitChatUITests/Pods-ViperChitChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D8C05505D8BA8323F160CF0 /* Pods_ViperChitChat_ViperChitChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperChitChat_ViperChitChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +144,12 @@
 		6D1C9D5524E09C780073A806 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				6DDBF7EA24EC440900E2D18A /* View */,
+				6DDBF7EB24EC441200E2D18A /* Interactor */,
+				6DDBF7EC24EC442000E2D18A /* Presenter */,
+				6DDBF7ED24EC443800E2D18A /* DataManager */,
+				6DDBF7EE24EC444300E2D18A /* Router */,
+				6DDBF7EF24EC444A00E2D18A /* Interfaces */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -293,6 +313,55 @@
 			path = ViperChitChat;
 			sourceTree = "<group>";
 		};
+		6DDBF7EA24EC440900E2D18A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6DDBF7F024EC449700E2D18A /* RegisterViewController.swift */,
+				6DDBF7F124EC449700E2D18A /* RegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DDBF7EB24EC441200E2D18A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6DD48C1F24EC5BFB003334C4 /* RegisterInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6DDBF7EC24EC442000E2D18A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6DD48C1D24EC59EE003334C4 /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6DDBF7ED24EC443800E2D18A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				6DD48C2124EC5C85003334C4 /* RegisterDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		6DDBF7EE24EC444300E2D18A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6DD48C2324EC5D64003334C4 /* RegisterRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6DDBF7EF24EC444A00E2D18A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				6DDBF7F424EC46DF00E2D18A /* RegisterInterfaces.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		E418763F30EB6B06C8179A52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D1C9E5124E988FA0073A806 /* SignInViewController.xib in Resources */,
+				6DDBF7F324EC449700E2D18A /* RegisterViewController.xib in Resources */,
 				6D56F36324D9EDC800F635EA /* LaunchScreen.storyboard in Resources */,
 				6D1C9D5224E027BD0073A806 /* GoogleService-Info.plist in Resources */,
 				6D56F36024D9EDC800F635EA /* Assets.xcassets in Resources */,
@@ -599,12 +669,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D1C9E5524E98B540073A806 /* SignInPresenter.swift in Sources */,
+				6DD48C2224EC5C85003334C4 /* RegisterDataManager.swift in Sources */,
+				6DDBF7F224EC449700E2D18A /* RegisterViewController.swift in Sources */,
 				6D1C9E5024E988FA0073A806 /* SignInViewController.swift in Sources */,
 				6D56F35424D9EDC700F635EA /* AppDelegate.swift in Sources */,
+				6DD48C1E24EC59EE003334C4 /* RegisterPresenter.swift in Sources */,
 				6D1C9E5724E98E9F0073A806 /* SignInRouter.swift in Sources */,
 				6D1C9E5924E98FDC0073A806 /* SignInInteractor.swift in Sources */,
+				6DDBF7F524EC46DF00E2D18A /* RegisterInterfaces.swift in Sources */,
 				6D1C9E5B24E9914A0073A806 /* SignInDataManager.swift in Sources */,
 				6D1C9D7C24E321640073A806 /* SceneDelegate.swift in Sources */,
+				6DD48C2424EC5D64003334C4 /* RegisterRouter.swift in Sources */,
+				6DD48C2024EC5BFB003334C4 /* RegisterInteractor.swift in Sources */,
 				6D1C9D8324E32ECF0073A806 /* ChatLogRouter.swift in Sources */,
 				6D1C9E5324E989D10073A806 /* SignInInterfaces.swift in Sources */,
 			);

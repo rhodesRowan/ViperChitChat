@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kFi-fd-OEL">
-                    <rect key="frame" x="60" y="379" width="294" height="138"/>
+                    <rect key="frame" x="60" y="354" width="294" height="188"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-LX-rvk">
                             <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
@@ -44,10 +44,19 @@
                                 <action selector="signInPressed:" destination="-1" eventType="touchUpInside" id="IR3-gC-0Fz"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35q-y4-RSe">
+                            <rect key="frame" x="0.0" y="158" width="294" height="30"/>
+                            <state key="normal" title="Register"/>
+                            <connections>
+                                <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="Yf4-ol-4HU"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bDU-LX-rvk" secondAttribute="trailing" id="14R-LN-Xd9"/>
                         <constraint firstAttribute="trailing" secondItem="8u2-AJ-aj1" secondAttribute="trailing" id="B8N-f3-zAK"/>
+                        <constraint firstItem="35q-y4-RSe" firstAttribute="leading" secondItem="kFi-fd-OEL" secondAttribute="leading" id="DC2-0D-BU9"/>
+                        <constraint firstAttribute="trailing" secondItem="35q-y4-RSe" secondAttribute="trailing" id="Tq8-vw-xfi"/>
                         <constraint firstItem="GEq-qM-mf1" firstAttribute="leading" secondItem="kFi-fd-OEL" secondAttribute="leading" id="ZOz-Fv-PtO"/>
                         <constraint firstItem="bDU-LX-rvk" firstAttribute="leading" secondItem="kFi-fd-OEL" secondAttribute="leading" id="cz1-DY-FTr"/>
                         <constraint firstItem="8u2-AJ-aj1" firstAttribute="leading" secondItem="kFi-fd-OEL" secondAttribute="leading" id="fK3-2r-bFx"/>

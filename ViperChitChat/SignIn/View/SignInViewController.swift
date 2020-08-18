@@ -24,6 +24,10 @@ class SignInViewController: UIViewController, SignInViewInterface {
                                                 password: passwordTextField.text ?? "")
     }
     
+    @IBAction func registerButton(_ sender: Any) {
+        presenter?.notifyUserDidTapRegisterButton()
+    }
+    
     func showErrorMessage(withError error: String) {
         print("show error message")
     }

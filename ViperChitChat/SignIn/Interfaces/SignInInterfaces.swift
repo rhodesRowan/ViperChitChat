@@ -6,7 +6,7 @@
 //  Copyright © 2020 Rowan Rhodes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SignInViewInterface {
     var presenter: SignInPresenterInterface? { get set }
@@ -24,6 +24,7 @@ protocol SignInPresenterInterface {
     var view: SignInViewInterface? { get set }
     func notifyViewDidLoad()
     func notifyUserDidTapSignInButton(withEmail email: String, password: String)
+    func notifyUserDidTapRegisterButton()
     
     func userDidLoginSuccessfully()
     func userDidFailToLogin()
@@ -34,7 +35,7 @@ protocol SignInDataManagerInterface {
 }
 
 protocol SignInRouterInterface {
-    func presentSignInModule()
+    func presentSignInModule(fromCaller: AnyObject)
     func presentChatListModule()
     func presentRegisterModule()
 }
