@@ -24,8 +24,13 @@ class SignInViewController: UIViewController, SignInViewInterface {
                                                 password: passwordTextField.text ?? "")
     }
     
+<<<<<<< Updated upstream
     @IBAction func registerButton(_ sender: Any) {
         presenter?.notifyUserDidTapRegisterButton()
+=======
+    @IBAction func signUpPressed(_ sender: Any) {
+        presenter?.notifyUserDidTapSignUpButton()
+>>>>>>> Stashed changes
     }
     
     func showErrorMessage(withError error: String) {

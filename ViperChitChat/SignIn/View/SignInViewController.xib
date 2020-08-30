@@ -63,13 +63,42 @@
                         <constraint firstAttribute="trailing" secondItem="GEq-qM-mf1" secondAttribute="trailing" id="ggl-P2-zyd"/>
                     </constraints>
                 </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SNt-gJ-vM7">
+                    <rect key="frame" x="151.5" y="522" width="202.5" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Have An Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-Av-KCe">
+                            <rect key="frame" x="0.0" y="0.0" width="146.5" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="U95-lN-6oI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-sb-8YX">
+                            <rect key="frame" x="151.5" y="0.0" width="51" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="nbs-DT-I4c"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <state key="normal" title="Sign Up">
+                                <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="signUpPressed:" destination="-1" eventType="touchUpInside" id="NUV-Wt-3ya"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="kFi-fd-OEL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9Ce-Os-K2n"/>
                 <constraint firstItem="kFi-fd-OEL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="M9o-VI-53b"/>
                 <constraint firstItem="kFi-fd-OEL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="N1E-h5-V27"/>
+                <constraint firstItem="SNt-gJ-vM7" firstAttribute="top" secondItem="kFi-fd-OEL" secondAttribute="bottom" constant="5" id="Vps-vp-PUC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kFi-fd-OEL" secondAttribute="trailing" constant="60" id="asg-RX-dei"/>
+                <constraint firstItem="SNt-gJ-vM7" firstAttribute="trailing" secondItem="kFi-fd-OEL" secondAttribute="trailing" id="t4k-Vd-wFX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="106"/>

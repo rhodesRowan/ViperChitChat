@@ -22,6 +22,10 @@ class SignInPresenter: SignInPresenterInterface {
         self.interactor?.attemptToSignIn(withEmail: email, password: password)
     }
     
+    func notifyUserDidTapSignUpButton() {
+        self.router?.presentRegisterModule()
+    }
+    
     func userDidLoginSuccessfully() {
         print("user did sign in succesfully")
         router?.presentChatListModule()
