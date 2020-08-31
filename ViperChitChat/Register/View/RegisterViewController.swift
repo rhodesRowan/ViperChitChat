@@ -9,21 +9,25 @@
 import UIKit
 
 class RegisterViewController: UIViewController, RegisterViewInterface {
-    
+
     var presenter: RegisterPresenterInterface?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func register(_ sender: Any) {
         presenter?.notifyUserDidTapRegisterButton(withEmail: emailTextField.text ?? "",
                                                   password: passwordTextField.text ?? "")
     }
-    
+
+    @IBAction func closeButton(_ sender: Any) {
+        presenter?.notifyUserDidTapCloseButton()
+    }
+
     func showErrorMessages(error: String) {
         print(error)
     }

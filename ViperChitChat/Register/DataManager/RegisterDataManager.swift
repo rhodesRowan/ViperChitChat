@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import Firebase
 
 class RegisterDataManager: RegisterDataManagerInterface {
-    
+
     var interactor: RegisterInteractorInterface?
-    
+
     func attemptToRegisterUser(withEmail email: String, password: String, completion: @escaping (Bool) -> Void) {
-        completion(true)
+        Auth.auth().createUser(withEmail: email, password: password) { _, error in
+            completion(error == nil)
+        }
     }
 }

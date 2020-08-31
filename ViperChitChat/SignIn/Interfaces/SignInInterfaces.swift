@@ -22,10 +22,10 @@ protocol SignInInteractorInterface {
 protocol SignInPresenterInterface {
     var interactor: SignInInteractorInterface? { get set }
     var view: SignInViewInterface? { get set }
+
     func notifyViewDidLoad()
     func notifyUserDidTapSignInButton(withEmail email: String, password: String)
     func notifyUserDidTapRegisterButton()
-    
     func userDidLoginSuccessfully()
     func userDidFailToLogin()
 }

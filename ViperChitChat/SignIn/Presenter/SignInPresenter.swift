@@ -9,7 +9,7 @@
 import Foundation
 
 class SignInPresenter: SignInPresenterInterface {
-    
+
     var interactor: SignInInteractorInterface?
     var view: SignInViewInterface?
     var router: SignInRouterInterface?
@@ -21,16 +21,16 @@ class SignInPresenter: SignInPresenterInterface {
     func notifyUserDidTapSignInButton(withEmail email: String, password: String) {
         self.interactor?.attemptToSignIn(withEmail: email, password: password)
     }
-    
+
     func notifyUserDidTapSignUpButton() {
         self.router?.presentRegisterModule()
     }
-    
+
     func userDidLoginSuccessfully() {
         print("user did sign in succesfully")
         router?.presentChatListModule()
     }
-    
+
     func notifyUserDidTapRegisterButton() {
         router?.presentRegisterModule()
     }

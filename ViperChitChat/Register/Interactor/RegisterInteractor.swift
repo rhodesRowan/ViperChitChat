@@ -9,10 +9,10 @@
 import Foundation
 
 class RegisterInteractor: RegisterInteractorInterface {
-    
+
     var presenter: RegisterPresenterInterface?
     var dataManager: RegisterDataManagerInterface?
-    
+
     func attemptToRegisterUser(withEmail email: String, password: String) {
         dataManager?.attemptToRegisterUser(withEmail: email, password: password, completion: { success in
             if success {
@@ -22,6 +22,4 @@ class RegisterInteractor: RegisterInteractorInterface {
             }
         })
     }
-    
-    
 }

@@ -18,16 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let signInView = SignInViewController(nibName: "SignInViewController", bundle: nil)
         let signInInteractor = SignInInteractor()
+        let signInRouter = SignInRouter()
         signInInteractor.dataManager = SignInDataManager()
         let signInPresenter = SignInPresenter()
         signInInteractor.presenter = signInPresenter
         signInPresenter.interactor = signInInteractor
-        signInPresenter.router = SignInRouter()
+        signInPresenter.router = signInRouter
         signInPresenter.view = signInView
         signInView.presenter = signInPresenter
+        signInRouter.signUpView = signInView
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = signInView
         window?.makeKeyAndVisible()
-        
     }
 }

@@ -9,45 +9,42 @@
 import UIKit
 
 class RegisterRouter: RegisterRouterInterface {
-    
-    
+
     var registerView: RegisterViewController?
-    
+
     func createRegisterModule(fromCaller: AnyObject) {
-        guard let view = UIStoryboard(name: "RegisterViewController", bundle: nil).instantiateViewController(identifier: "RegisterViewController") as? RegisterViewController  else {
+        let storyboard = UIStoryboard(name: "RegisterViewController", bundle: nil)
+        guard let view = storyboard.instantiateViewController(identifier:
+            "RegisterViewController") as? RegisterViewController  else {
             return
         }
-        
+
         registerView = view
         let registerView = RegisterViewController()
         let registerInteractor = RegisterInteractor()
         let registerPresenter = RegisterPresenter()
         let registerDataManager = RegisterDataManager()
         let registerRouter = RegisterRouter()
-        
+
         registerView.presenter = registerPresenter
-        
+
         registerPresenter.interactor = registerInteractor
         registerPresenter.router = registerRouter
         registerPresenter.view = registerView
-        
+
         registerInteractor.presenter = registerPresenter
         registerInteractor.dataManager = registerDataManager
-        
+
         if let viewController = fromCaller as? UIViewController {
             viewController.present(registerView, animated: true, completion: nil)
         }
     }
-    
+
     func createChatListModule() {
-        
+        print("WE SUCCESSFULLY SIGNED IN")
     }
-    
+
     func dismissRegisterModule() {
-        
+        self.registerView?.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
 }

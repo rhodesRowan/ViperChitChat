@@ -10,14 +10,14 @@ import Foundation
 
 protocol RegisterViewInterface {
     var presenter: RegisterPresenterInterface? { get set }
-    
+
     func showErrorMessages(error: String)
 }
 
 protocol RegisterInteractorInterface {
     var presenter: RegisterPresenterInterface? { get set }
     var dataManager: RegisterDataManagerInterface? { get set }
-    
+
     func attemptToRegisterUser(withEmail email: String, password: String)
 }
 
@@ -25,10 +25,11 @@ protocol RegisterPresenterInterface {
     var interactor: RegisterInteractorInterface? { get set }
     var view: RegisterViewInterface? { get set }
     var router: RegisterRouterInterface? { get set }
-    
+
     func notifyUserDidTapRegisterButton(withEmail email: String, password: String)
     func notifyViewDidLoad()
-    
+    func notifyUserDidTapCloseButton()
+
     func didSignUpSuccessfully()
     func didFailToSignUp()
 }

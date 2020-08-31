@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Firebase
 
 class SignInDataManager: SignInDataManagerInterface {
-    
+
     func attemptToSignIn(withEmail email: String, password: String, completion: @escaping (Bool) -> Void) {
-        completion(true)
+        Auth.auth().signIn(withEmail: email, password: password) { _, error in
+            completion(error == nil)
+        }
     }
 }
