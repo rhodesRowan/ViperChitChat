@@ -15,20 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let signInView = SignInViewController(nibName: "SignInViewController", bundle: nil)
-        let signInInteractor = SignInInteractor()
-        let signInRouter = SignInRouter()
-        signInInteractor.dataManager = SignInDataManager()
-        let signInPresenter = SignInPresenter()
-        signInInteractor.presenter = signInPresenter
-        signInPresenter.interactor = signInInteractor
-        signInPresenter.router = signInRouter
-        signInPresenter.view = signInView
-        signInView.presenter = signInPresenter
-        signInRouter.signUpView = signInView
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = signInView
-        window?.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            let chatListBuilder = ChatListModuleBuilder()
+            window.rootViewController = chatListBuilder.buildModule()
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 }
