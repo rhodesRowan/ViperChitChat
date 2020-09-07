@@ -13,6 +13,8 @@ target 'ViperChitChat' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 
   target 'ViperChitChatTests' do
     inherit! :search_paths

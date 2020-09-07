@@ -18,7 +18,8 @@ class ChatListPresenter: ChatListPresenterInterface {
 
     // MARK: Initialization
 
-    init(withRouter router: ChatListRouterInterface, interactor: ChatListInteractorInterface, view: ChatListViewInterface) {
+    init(withRouter router: ChatListRouterInterface,
+         interactor: ChatListInteractorInterface, view: ChatListViewInterface) {
         self.view = view
         self.router = router
         self.interactor = interactor
