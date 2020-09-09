@@ -23,4 +23,21 @@ class RegisterPresenter: RegisterPresenterInterface {
         self.router = router
         self.interactor = interactor
     }
+    
+    // MARK: RegisterPresenterInterface methods
+    func notifyUserDidPressClose() {
+        router?.presentRegisterModule()
+    }
+    
+    func notifyUserDidPressRegister(with email: String, password: String, name: String) {
+        interactor?.attemptToRegisterUser(with: email, password: password, name: name)
+    }
+    
+    func userDidRegisterSuccesfully() {
+        router?.presentChatListModule()
+    }
+    
+    func userDidFailToRegister(with error: String) {
+        view?.showFailedToRegisterError(error)
+    }
 }

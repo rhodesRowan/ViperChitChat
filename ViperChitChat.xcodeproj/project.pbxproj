@@ -52,6 +52,8 @@
 		6DCF700F2506C04C00E8A960 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF70082506C04C00E8A960 /* RegisterViewController.swift */; };
 		6DCF70102506C04C00E8A960 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF70092506C04C00E8A960 /* RegisterInteractor.swift */; };
 		6DCF70112506C04C00E8A960 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DCF700A2506C04C00E8A960 /* RegisterViewController.xib */; };
+		6DCF7016250961AF00E8A960 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF7014250961AF00E8A960 /* AuthTextField.swift */; };
+		6DCF7017250961AF00E8A960 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCF7015250961AF00E8A960 /* AuthButton.swift */; };
 		BFC9594026776B174F485A1A /* Pods_ViperChitChat_ViperChitChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8C05505D8BA8323F160CF0 /* Pods_ViperChitChat_ViperChitChatUITests.framework */; };
 		ECCAF555BD1E0153776896C9 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612CAD144C252CBDDEA17CF5 /* EarlGrey.framework */; };
 		EE58CCF36212F2CA4C2B8B40 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94847B7C1EF1216244A6E5D /* EarlGrey.swift */; };
@@ -130,6 +132,8 @@
 		6DCF70082506C04C00E8A960 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6DCF70092506C04C00E8A960 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		6DCF700A2506C04C00E8A960 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		6DCF7014250961AF00E8A960 /* AuthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		6DCF7015250961AF00E8A960 /* AuthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		858557EE78F8ED17EE26CBE3 /* Pods-ViperChitChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperChitChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-ViperChitChatUITests/Pods-ViperChitChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AD0F037D57DACD728917D9C /* Pods-ViperChitChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperChitChatUITests.release.xcconfig"; path = "Target Support Files/Pods-ViperChitChatUITests/Pods-ViperChitChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D8C05505D8BA8323F160CF0 /* Pods_ViperChitChat_ViperChitChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperChitChat_ViperChitChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +231,7 @@
 		6D56F35224D9EDC700F635EA /* ViperChitChat */ = {
 			isa = PBXGroup;
 			children = (
+				6DCF70132509619C00E8A960 /* ReusableViews */,
 				6DCF6FFE2506B47800E8A960 /* Helpers */,
 				6DCF6FED2506B30600E8A960 /* API */,
 				6DCF6FEE2506B43600E8A960 /* Models */,
@@ -351,6 +356,15 @@
 				6DCF700A2506C04C00E8A960 /* RegisterViewController.xib */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		6DCF70132509619C00E8A960 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				6DCF7015250961AF00E8A960 /* AuthButton.swift */,
+				6DCF7014250961AF00E8A960 /* AuthTextField.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		E418763F30EB6B06C8179A52 /* Frameworks */ = {
@@ -660,6 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DCF7017250961AF00E8A960 /* AuthButton.swift in Sources */,
 				6DCF70002506B4A200E8A960 /* Date+String.swift in Sources */,
 				6DCF70102506C04C00E8A960 /* RegisterInteractor.swift in Sources */,
 				6DCF6FFC2506B43600E8A960 /* ChitChatUser.swift in Sources */,
@@ -693,6 +708,7 @@
 				6DCF70022506B5CC00E8A960 /* MessageType.swift in Sources */,
 				6DCF6FFA2506B43600E8A960 /* PhotoMessage.swift in Sources */,
 				6DCF6FC72501993300E8A960 /* ChatListModuleBuilder.swift in Sources */,
+				6DCF7016250961AF00E8A960 /* AuthTextField.swift in Sources */,
 				6DCF6FE72506B2FB00E8A960 /* UserDetailsManager.swift in Sources */,
 				6DCF6FF82506B43600E8A960 /* VideoMessage.swift in Sources */,
 			);

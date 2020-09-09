@@ -23,10 +23,10 @@ class SignInRouter: SignInRouterInterface {
         guard let viewController = self.viewController, let registerVC = registerBuilder.buildModule() else {
             return
         }
-        
+        registerVC.modalPresentationStyle = .fullScreen
         viewController.present(registerVC, animated: true, completion: nil)
     }
-    
+
     func presentChatListModule() {
         let chatListBuilder = ChatListModuleBuilder()
         guard let viewController = self.viewController, let chatListVC = chatListBuilder.buildModule() else {
