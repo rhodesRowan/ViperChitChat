@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 class RegisterViewController: UIViewController, RegisterViewInterface {
-
+    
     // MARK: Properties
+    @IBOutlet weak var nameTextField: AuthTextField!
+    @IBOutlet weak var emailTextField: AuthTextField!
+    @IBOutlet weak var passwordTextField:  AuthTextField!
 
     var presenter: RegisterPresenterInterface?
 
@@ -29,5 +32,26 @@ class RegisterViewController: UIViewController, RegisterViewInterface {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    // MARK: Actions
+    
+    @IBAction func registerButtonPressed(_ sender: Any) {
+        guard let email = emailTextField.text, let name = nameTextField.text,
+            let password = passwordTextField.text else {
+            return
+        }
+
+        presenter?.notifyUserDidPressRegister(with: email, password: password, name: name)
+    }
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        presenter?.notifyUserDidPressClose()
+    }
+
+    // MARK: RegisterViewInterface
+
+    func showFailedToRegisterError(_ error: String) {
+        print("show error : \(error)")
     }
 }

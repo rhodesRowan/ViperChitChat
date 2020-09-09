@@ -15,6 +15,8 @@ target 'ViperChitChat' do
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'IQKeyboardManagerSwift'
+
 
   target 'ViperChitChatTests' do
     inherit! :search_paths

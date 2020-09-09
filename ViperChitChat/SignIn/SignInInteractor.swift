@@ -20,10 +20,10 @@ class SignInInteractor: SignInInteractorInterface {
                 return
             }
             
-            if let error = error {
-                self.presenter?.userFailedToSignIn(with: error)
-            } else if success {
+            if success {
                 self.presenter?.userSuccessfullySignIn()
+            } else {
+                self.presenter?.userFailedToSignIn(with: error ?? "There was an error signing in")
             }
         }
     }

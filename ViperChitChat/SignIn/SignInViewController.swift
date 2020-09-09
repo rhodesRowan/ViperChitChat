@@ -13,8 +13,8 @@ class SignInViewController: UIViewController, SignInViewInterface {
 
     // MARK: Properties
     var presenter: SignInPresenterInterface?
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: AuthTextField!
+    @IBOutlet weak var passwordTextField: AuthTextField!
 
     // MARK: Initialization
 
